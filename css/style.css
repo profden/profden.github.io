@@ -18,13 +18,13 @@ body {
 
 h1 {
     color: darkolivegreen;
-    padding-bottom: 20px;
+    padding-bottom: 0.5%;
 }
 
 h2 {
     color: darkgrey;
     font-family: 'tit_extr_light_ita', sans-serif;
-    padding-bottom: 10px;
+    padding-bottom: 0.25%;
 }
 
 p {
@@ -36,8 +36,8 @@ p {
 }
 
 #trex_image {
-    width: 810px;
-    margin-bottom: 10px;
+    width: 65%;
+    margin-bottom: 0.25%;
     box-shadow: 5px 5px 10px black;
     border-radius: 15px;
 }
