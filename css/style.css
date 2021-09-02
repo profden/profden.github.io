@@ -1,0 +1,47 @@
+@font-face {
+    font-family: tit_light;
+    src: url(fonts/TitilliumWeb-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: tit_extr_light_ita;
+    src: url(fonts/TitilliumWeb-ExtraLightItalic.ttf);
+    font-weight: 200;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'tit_light', sans-serif;
+    font-size: larger;
+}
+
+h1 {
+    color: darkolivegreen;
+    padding-bottom: 20px;
+}
+
+h2 {
+    color: darkgrey;
+    font-family: 'tit_extr_light_ita', sans-serif;
+    padding-bottom: 10px;
+}
+
+p {
+    text-align: justify;
+}
+
+#trex {
+    text-align: center;
+}
+
+#trex_image {
+    width: 810px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 15px;
+}
+
+.header {
+    text-align: center;
+}
