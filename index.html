@@ -3,18 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>My site</title>
+    <link rel="stylesheet" href="lib/bootstrap-5.1.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <h1 class="header">Welcome to my site!</h1>
-    <h2 class="header">"Life finds a way"</h2>
-    <div id="trex">
-        <img src="img/trex_roar.jpg" alt="A Tyrannosaurus Rex roaring through a ruined fence, with a burning Jurassic World behind her" id="trex_image">
+<body onload="offerOfTheDay(7);">
+    <div class="row weather-offer-row">
+        <div class="col-4"></div>
+        <div class="col-4 offer-text">
+            <p id="weather-offer">
+                The temperature on <span id="weather-offer-day"></span> is <span id="weather-offer-temp"></span>, the daily offer is <span id="weather-offer-type"></span>.
+            </p>
+        </div>
+        <div class="col-1 offer-text-select select-button">
+            <button type="button" class="btn btn-primary" onclick="offerOfTheDay(document.getElementById('select-day').value);">Select</button>
+        </div>
+        <div class="col-3 offer-text-select">
+            <select name="select-day" id="select-day">
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">Wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+                <option value="6">Saturday</option>
+                <option value="0">Sunday</option>
+            </select>
+            <label for="select-day" class="offer text" id="select-day-label">Choose a day, to view the offer</label>
+        </div>
     </div>
-    <h4>Description:</h4>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique metus tempus efficitur dictum. Nunc luctus nulla vehicula purus blandit, at tincidunt felis auctor. Curabitur sed sem dapibus, cursus nisl id, fringilla elit. Aliquam mattis faucibus libero consectetur scelerisque. Donec risus elit, vulputate a bibendum sit amet, ultricies at eros. Curabitur sit amet erat vitae ligula aliquam ullamcorper pharetra quis ipsum. Praesent rhoncus purus libero. Proin aliquam feugiat dapibus. Donec ipsum dolor, mollis eget turpis eu, lacinia feugiat quam. Nulla facilisi. Integer euismod sed lectus vel elementum. Nullam sed consectetur nisl. Nam id posuere sem. Etiam odio erat, fermentum vitae ultrices eget, pellentesque et odio. Sed vel arcu mi.</p>
-    <p>Praesent vitae ipsum sed metus venenatis accumsan. Nulla mattis orci id lorem egestas, a ullamcorper nibh pellentesque. Vestibulum pretium blandit tortor, vitae pulvinar felis luctus id. Vivamus sed ultrices arcu. Cras euismod sagittis eleifend. Praesent vel tristique nibh. Suspendisse maximus nisi gravida ornare consectetur.</p>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 welcome" id="welcome-text">
+            <p>
+                This is a test site
+            </p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 welcome" id="welcome-quote">
+            <p>
+                "Life finds a way..."
+            </p>
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8 image-container">
+            <img src="img/trex_roar.jpg" alt="A Tyrannosaurus Rex roaring through a ruined fence, with a burning Jurassic World behind her" id="trex-image">
+        </div>
+        <div class="col-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-1"></div>
+        <div class="col-10 page-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi tristique metus tempus efficitur dictum. Nunc luctus nulla vehicula purus blandit, at tincidunt felis auctor. Curabitur sed sem dapibus, cursus nisl id, fringilla elit. Aliquam mattis faucibus libero consectetur scelerisque. Donec risus elit, vulputate a bibendum sit amet, ultricies at eros. Curabitur sit amet erat vitae ligula aliquam ullamcorper pharetra quis ipsum. Praesent rhoncus purus libero. Proin aliquam feugiat dapibus. Donec ipsum dolor, mollis eget turpis eu, lacinia feugiat quam. Nulla facilisi. Integer euismod sed lectus vel elementum. Nullam sed consectetur nisl. Nam id posuere sem. Etiam odio erat, fermentum vitae ultrices eget, pellentesque et odio. Sed vel arcu mi.</p>
+            <p>Praesent vitae ipsum sed metus venenatis accumsan. Nulla mattis orci id lorem egestas, a ullamcorper nibh pellentesque. Vestibulum pretium blandit tortor, vitae pulvinar felis luctus id. Vivamus sed ultrices arcu. Cras euismod sagittis eleifend. Praesent vel tristique nibh. Suspendisse maximus nisi gravida ornare consectetur.</p>
+        </div>
+        <div class="col-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6 welcome" id="order-title">
+            <p>
+                Order a plushie
+            </p>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-3"></div>
+        <div class="col-6">
+            <form>
+                <div class="row g-3">
+                    <div class="col-1">
+                        <div class="form-group">
+                            <input type="checkbox" class="form-check-input" id="brachiosaurus" name="brachiosaurus" onclick="enableDisable();">
+                        </div>  
+                    </div>
+                    <div class="col-5">
+                        <div class="form group">    
+                            <label class="form-check-label" for="brachiosaurus">Brachiosaurus (1.000 Ft / db)</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Amount" id="brachiosaurus-amount" name="brachiosaurus-amount" min="1" max="10" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-1">
+                        <div class="form-group">
+                            <input type="checkbox" class="form-check-input" id="triceratops" name="triceratops" onclick="enableDisable();">
+                        </div>  
+                    </div>
+                    <div class="col-5">
+                        <div class="form group">    
+                            <label class="form-check-label" for="triceratops">Triceratops (1.500 Ft / db)</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Amount" id="triceratops-amount" name="triceratops-amount" min="1" max="10" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-1">
+                        <div class="form-group">
+                            <input type="checkbox" class="form-check-input" id="trex" name="trex" onclick="enableDisable();">
+                        </div>  
+                    </div>
+                    <div class="col-5">
+                        <div class="form group">    
+                            <label class="form-check-label" for="trex">T-Rex (2.000 Ft / db)</label>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="Amount" id="trex-amount" name="trex-amount" min="1" max="10" disabled>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-4"></div>
+                    <div class="col-2">
+                        <div class="form-group">
+                            <button type="button" class="btn btn-primary" onclick="validateFields();">Submit</button>
+                        </div>
+                    </div>
+                    <div class="col-6"></div>
+                </div>
+                <div class="row g-3">
+                    <div class="col-3"></div>
+                    <div class="col-9">
+                        <div class="form-group">
+                            <p class="page-text" id="price">The order total is 0 Ft</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <script src="lib/bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/order.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>

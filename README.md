@@ -1,2 +1,1 @@
-# profden.github.io
-My test site
+# html_bootstrap_js_training

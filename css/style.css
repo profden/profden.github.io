@@ -1,47 +1,75 @@
-@font-face {
-    font-family: tit_light;
-    src: url(fonts/TitilliumWeb-Light.ttf);
-    font-weight: 300;
-}
-
-@font-face {
-    font-family: tit_extr_light_ita;
-    src: url(fonts/TitilliumWeb-ExtraLightItalic.ttf);
-    font-weight: 200;
-}
-
 body {
-    background-color: antiquewhite;
-    font-family: 'tit_light', sans-serif;
-    font-size: larger;
+    background-color: blanchedalmond;
 }
 
-h1 {
+div.welcome {
+    text-align: center;
+}
+
+div.image-container {
+    text-align: center;
+}
+
+div#welcome-text {
+    font-size: 3rem;
     color: darkolivegreen;
-    padding-bottom: 0.5%;
+    font-weight: bold;
+    padding-bottom: 2.5%;
 }
 
-h2 {
-    color: darkgrey;
-    font-family: 'tit_extr_light_ita', sans-serif;
-    padding-bottom: 0.25%;
+div#welcome-quote {
+    font-size: 2rem;
+    color: #888888;
+    font-style: italic;
+    padding-bottom: 1.5%;
 }
 
-p {
+div.page-text {
+    font-size: 1.2rem;
     text-align: justify;
 }
 
-#trex {
-    text-align: center;
+div.page-text p{
+    padding-bottom: 1.2rem;
 }
 
-#trex_image {
-    width: 65%;
-    margin-bottom: 0.25%;
-    box-shadow: 5px 5px 10px black;
-    border-radius: 15px;
+#trex-image {
+    width: 95%;
+    padding-bottom: 8%;
 }
 
-.header {
-    text-align: center;
+div#order-title {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 1.5%;
+}
+
+.form-group {
+    padding-bottom: 0.75rem;
+}
+
+#price {
+    margin-left: 5%;
+}
+
+.weather-offer-row {
+    background-color: burlywood;
+}
+
+.offer-text {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+}
+
+.offer-text-select {
+    font-size: 1.3rem;
+    padding-top: 0.5rem;
+}
+
+#select-day-label {
+    display: block;
+}
+
+.select-button {
+    text-align: right;
 }
