@@ -52,24 +52,24 @@ div#order-title {
     margin-left: 5%;
 }
 
-.weather-offer-row {
+#weather-widget {
+    font-size: 1.1rem;
     background-color: burlywood;
-}
-
-.offer-text {
-    font-size: 1.3rem;
-    padding-top: 1rem;
-}
-
-.offer-text-select {
-    font-size: 1.3rem;
-    padding-top: 0.5rem;
-}
-
-#select-day-label {
-    display: block;
+    padding-top: 0.75rem;
 }
 
 .select-button {
+    text-align: right;
+}
+
+.left-column {
+    text-align: left;
+}
+
+.middle-column {
+    text-align: center;
+}
+
+.right-column {
     text-align: right;
 }

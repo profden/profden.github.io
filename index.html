@@ -8,35 +8,67 @@
     <link rel="stylesheet" href="lib/bootstrap-5.1.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="offerOfTheDay(7);">
-    <div class="row weather-offer-row">
-        <div class="col-4"></div>
-        <div class="col-4 offer-text">
-            <p id="weather-offer">
-                The temperature on <span id="weather-offer-day"></span> is <span id="weather-offer-temp"></span>, the daily offer is <span id="weather-offer-type"></span>.
-            </p>
+<body onload="offerOfTheDay(); minTemp(); avgTemp(); maxTemp();">
+    <div id="weather-widget">
+        <div class="row weather-offer-row">
+            <div class="col-4 left-column">
+                <p>
+                    Daily Temperature
+                </p>
+            </div>
+            <div class="col-4 middle-column">
+                <p id="weather-offer-day"></p>
+            </div>
+            <div class="col-4 right-column">
+                <p class="weather-offer" id="weather-offer-temp"></p>
+            </div>
         </div>
-        <div class="col-1 offer-text-select select-button">
-            <button type="button" class="btn btn-primary" onclick="offerOfTheDay(document.getElementById('select-day').value);">Select</button>
+        <div class="row weather-offer-row">
+            <div class="col-4 col-md5 left-column">
+                <select name="select-day" id="select-day">
+                    <option value="1">Monday</option>
+                    <option value="2">Tuesday</option>
+                    <option value="3">Wednesday</option>
+                    <option value="4">Thursday</option>
+                    <option value="5">Friday</option>
+                    <option value="6">Saturday</option>
+                    <option value="0">Sunday</option>
+                </select>
+                <button type="button" class="btn btn-primary" onclick="offerOfTheDay(document.querySelector('#select-day').value);">Select</button>            
+            </div>
+            <div class="col-4 col-md2 middle-column">
+                <p>
+                    Weekly weather statistics:
+                </p>
+            </div>
+            <div class="col-4 col-md5 right-column">
+                <p class="weather-offer" id="weather-offer-type">
+                </p>
+            </div>
         </div>
-        <div class="col-3 offer-text-select">
-            <select name="select-day" id="select-day">
-                <option value="1">Monday</option>
-                <option value="2">Tuesday</option>
-                <option value="3">Wednesday</option>
-                <option value="4">Thursday</option>
-                <option value="5">Friday</option>
-                <option value="6">Saturday</option>
-                <option value="0">Sunday</option>
-            </select>
-            <label for="select-day" class="offer text" id="select-day-label">Choose a day, to view the offer</label>
+        <div class="row weather-offer-row">
+            <div class="col-4 left-column">
+                <p>
+                    MIN: <span id="min-temp"></span>
+                </p>
+            </div>
+            <div class="col-4 middle-column">
+                <p>
+                    AVG: <span id="avg-temp"></span>
+                </p>
+            </div>
+            <div class="col-4 right-column">
+                <p>
+                    MAX: <span id="max-temp"></span>
+                </p>
+            </div>
         </div>
     </div>
     <div class="row">
         <div class="col-3"></div>
         <div class="col-6 welcome" id="welcome-text">
             <p>
-                This is a test site
+                Jurassic Company
             </p>
         </div>
         <div class="col-3"></div>
@@ -133,7 +165,7 @@
                     <div class="col-4"></div>
                     <div class="col-2">
                         <div class="form-group">
-                            <button type="button" class="btn btn-primary" onclick="validateFields();">Submit</button>
+                            <button type="button" class="btn btn-primary" onclick="validateFields();">Order</button>
                         </div>
                     </div>
                     <div class="col-6"></div>

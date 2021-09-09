@@ -1,17 +1,17 @@
 function enableDisable() {
-    let checkboxStatusBrachio = document.getElementById('brachiosaurus').checked;
-    let checkboxStatusTrike = document.getElementById('triceratops').checked;
-    let checkboxStatusTrex = document.getElementById('trex').checked;
-    document.getElementById('brachiosaurus-amount').disabled = !checkboxStatusBrachio;
-    document.getElementById('triceratops-amount').disabled = !checkboxStatusTrike;
-    document.getElementById('trex-amount').disabled = !checkboxStatusTrex;
+    let checkboxStatusBrachio = document.querySelector('#brachiosaurus').checked;
+    let checkboxStatusTrike = document.querySelector('#triceratops').checked;
+    let checkboxStatusTrex = document.querySelector('#trex').checked;
+    document.querySelector('#brachiosaurus-amount').disabled = !checkboxStatusBrachio;
+    document.querySelector('#triceratops-amount').disabled = !checkboxStatusTrike;
+    document.querySelector('#trex-amount').disabled = !checkboxStatusTrex;
 }
 
 function showPrice(price) {
     if (price > 5000) {
-        document.getElementById("price").innerHTML = "The order total is " + price + " Ft, no shipping fee";        
+        document.querySelector("#price").innerHTML = "The order total is " + price + " Ft, no shipping fee";        
     } else {
-        document.getElementById("price").innerHTML = "The order total is " + price + " Ft, 500 Ft shipping fee applied (no shipping fee for order over 5000 Ft)";
+        document.querySelector("#price").innerHTML = "The order total is " + price + " Ft, 500 Ft shipping fee applied (no shipping fee for order over 5000 Ft)";
     }
 }
 
