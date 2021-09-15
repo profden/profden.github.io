@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>My site</title>
+    <link rel="stylesheet" href="lib/bootstrap-5.1.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="offerOfTheDay(); minTemp(); avgTemp(); maxTemp(); aboutTableCreate(employees);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Jurassic Company</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html">About</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div id="weather-widget">
+        <div class="row weather-offer-row">
+            <div class="col-4 left-column">
+                <p>
+                    Daily Temperature
+                </p>
+            </div>
+            <div class="col-4 middle-column">
+                <p id="weather-offer-day"></p>
+            </div>
+            <div class="col-4 right-column">
+                <p class="weather-offer" id="weather-offer-temp"></p>
+            </div>
+        </div>
+        <div class="row weather-offer-row">
+            <div class="col-4 col-md5 left-column">
+                <select name="select-day" id="select-day">
+                    <option value="1">Monday</option>
+                    <option value="2">Tuesday</option>
+                    <option value="3">Wednesday</option>
+                    <option value="4">Thursday</option>
+                    <option value="5">Friday</option>
+                    <option value="6">Saturday</option>
+                    <option value="0">Sunday</option>
+                </select>
+                <button type="button" class="btn btn-primary" onclick="offerOfTheDay(document.querySelector('#select-day').value);">Select</button>            
+            </div>
+            <div class="col-4 col-md2 middle-column">
+                <p>
+                    Weekly weather statistics:
+                </p>
+            </div>
+            <div class="col-4 col-md5 right-column">
+                <p class="weather-offer" id="weather-offer-type">
+                </p>
+            </div>
+        </div>
+        <div class="row weather-offer-row">
+            <div class="col-4 left-column">
+                <p>
+                    MIN: <span id="min-temp"></span>
+                </p>
+            </div>
+            <div class="col-4 middle-column">
+                <p>
+                    AVG: <span id="avg-temp"></span>
+                </p>
+            </div>
+            <div class="col-4 right-column">
+                <p>
+                    MAX: <span id="max-temp"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container welcome" id="about-table-title">
+        <h1>Current Employees:</h1>
+    </div>
+    <div class="container">
+        <table class="table table-success table-striped table-hover" id="about-table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">Occupation</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+    </div>
+    <script src="lib/bootstrap-5.1.0-dist/js/bootstrap.min.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/weather.js"></script>
+</body>
+</html>

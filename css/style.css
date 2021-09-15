@@ -55,7 +55,7 @@ div#order-title {
 #weather-widget {
     font-size: 1.1rem;
     background-color: burlywood;
-    padding-top: 0.75rem;
+    padding: 4.35rem 0.75% 0%;
 }
 
 .select-button {
@@ -72,4 +72,19 @@ div#order-title {
 
 .right-column {
     text-align: right;
+}
+
+.navbar {
+    background-color: #ffd7b5 !important;
+    position: fixed !important;
+    width: 100%; 
+}
+
+#about-table {
+    margin-top: 3%;
+}
+
+#about-table-title {
+    margin-top: 3.5%;
+    color: darkolivegreen;
 }
